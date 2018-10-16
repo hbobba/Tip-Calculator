@@ -9,16 +9,52 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+   
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
+    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var tipSlider: UISlider!
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var peopleSlider: UISlider!
+    @IBOutlet weak var peopleLabel: UILabel!
+    @IBOutlet weak var totalAmountLabel: UILabel!
+    @IBOutlet weak var eachPersonAmountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Tip Calculator"
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func calculateEverything() {
+        let amount = (amountTextField.text! as NSString).doubleValue
+        let tipPercent = tipSlider.value
+        let tipAmount = amount * Double(tipPercent) / 100
+        tipAmountLabel.text = "Tip Amount : \(round(tipAmount * 100) / 100)"
+        
+        let totalAmount = amount + tipAmount;
+        totalAmountLabel.text = "Total Amount : \(round(totalAmount * 100) / 100)"
+        
+        let numberOfPeople = Int(peopleSlider.value)
+        peopleLabel.text = "Total People: \(numberOfPeople)"
+        
+        eachPersonAmountLabel.text = "Each Amount : \(round(totalAmount/Double(numberOfPeople)) * 100 / (100))"
+        
+        
     }
+    
+    @IBAction func peopleChanged(_ sender: Any) {
+        calculateEverything()
+    }
+    
+    @IBAction func tipChanged(_ sender: Any) {
+        calculateEverything()
+    }
+    @IBAction func amountChanged(_ sender: Any) {
+        calculateEverything()
+    }
+    
+ 
 
 
 }
