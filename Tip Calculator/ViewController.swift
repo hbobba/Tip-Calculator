@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
-    
+    @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var tipSlider: UISlider!
     @IBOutlet weak var tipAmountLabel: UILabel!
@@ -27,9 +27,14 @@ class ViewController: UIViewController {
         
     }
     func calculateEverything() {
-        let amount = (amountTextField.text! as NSString).doubleValue
+        guard let input = amountTextField.text, !input.isEmpty else {
+            return
+        }
+        
+        let amount = Double(input)!
         let tipPercent = tipSlider.value
-        let tipAmount = amount * Double(tipPercent) / 100
+        tipPercentageLabel.text = "Tip Percentage : \(round(tipPercent * 100) / 100)"
+        let tipAmount = (round(amount) * Double(tipPercent)) / 100
         tipAmountLabel.text = "Tip Amount : \(round(tipAmount * 100) / 100)"
         
         let totalAmount = amount + tipAmount;
