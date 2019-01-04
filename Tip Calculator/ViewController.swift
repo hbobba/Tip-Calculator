@@ -41,9 +41,9 @@ class ViewController: UIViewController {
         totalAmountLabel.text = "Total Amount : \(round(totalAmount * 100) / 100)"
         
         let numberOfPeople = Int(peopleSlider.value)
-        peopleLabel.text = "Total People: \(numberOfPeople)"
+        peopleLabel.text = "People In Total: \(numberOfPeople)"
         
-        eachPersonAmountLabel.text = "Each Amount : \(round(totalAmount/Double(numberOfPeople)) * 100 / (100))"
+        eachPersonAmountLabel.text = "Amount Per Person : \(round(totalAmount/Double(numberOfPeople)) * 100 / (100))"
         
         
     }
