@@ -4,7 +4,7 @@
 
 Submitted by: **Harshitha Bobba**
 
-Time spent: **3** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
@@ -15,31 +15,30 @@ The following **required** functionality is complete:
 The following **optional** features are implemented:
 * [ ] Settings page to change the default tip percentage.
 * [ ] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
+* [implemented] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
 * [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
+- [implemented] The tip percentage starts at a default setting of 10%. The minimum is 3% and the maximum is 30%.
 - [implemented] The total amount including the tip can be divided between upto 20 people and the amount paid per person is   displayed.
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
-<img src='https://user-images.githubusercontent.com/31484378/50716708-cfb9d000-1050-11e9-97d2-62995b7d7c14.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-![demo](https://user-images.githubusercontent.com/31484378/50715114-a77aa300-1049-11e9-8d6a-5ed7790bad3c.gif)
-![video_walkthrough](https://user-images.githubusercontent.com/31484378/50716708-cfb9d000-1050-11e9-97d2-62995b7d7c14.gif)
+<img src='https://user-images.githubusercontent.com/31484378/50716708-cfb9d000-1050-11e9-97d2-62995b7d7c14.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had some difficulty in figuring out how to set the app's icon. 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2019] [Harshitha Bobba]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
